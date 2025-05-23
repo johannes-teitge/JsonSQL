@@ -5,6 +5,48 @@ Alle nennenswerten Änderungen an diesem Projekt werden in diesem Dokument festg
 Dieses Changelog folgt den Richtlinien von [Keep a Changelog](https://keepachangelog.com/de/1.0.0/)
 und verwendet [Semantische Versionierung](https://semver.org/lang/de/).
 
+
+---
+
+
+## [1.1.0] – 2025-05-23  
+### Hinzugefügt
+- **TableRepair-Funktion erweitert:**
+  - Ergänzt fehlende Pflichtfelder, entfernt unerlaubte Felder und passt die Feldreihenfolge an die `system.json` an
+  - Repair-Logik in Demo und Admin-UI integriert (`demo_analyzeRepairTable.php`)
+  - Zusätzliche Felder werden alphabetisch am Ende des Datensatzes sortiert
+
+- **Konsistente Feldreihenfolge bei Insert & Update:**
+  - Alle Datensätze werden beim Einfügen und Aktualisieren automatisch sortiert:
+    - Systemfelder entsprechend der Reihenfolge in `system.json`
+    - Nicht definierte Felder alphabetisch hinten
+
+- **Hilfsfunktion `sortRecordFields()`:**
+  - Zentrale Utility-Methode für die Feldsortierung in allen Operationen (Insert, Update, Repair)
+
+- **Erweitertes Fehler- und Prüfprotokoll:**
+  - Reihenfolgenfehler werden zusätzlich zu fehlenden und unerlaubten Feldern erkannt und ausgegeben
+  - Verbesserte Darstellung der Ergebnisse im Admin-UI mit Hinweis „sortiert nach Systemdefinition“
+
+### Geändert
+- **Einheitliche Speicherung:**
+  - Insert, Update und Repair nutzen jetzt dieselbe Sortierlogik
+  - Fehler- und Demoseiten spiegeln die neue Feldreihenfolge wider
+  - TableRepair prüft und korrigiert explizit die Feldreihenfolge
+
+- **UI/UX-Verbesserungen:**
+  - Hinweise zur Feldreihenfolge und Reparaturstatus ergänzt
+
+- **Dokumentation:**
+  - Neue Doku-Abschnitte und Beispiele zu TableRepair, Feldsortierung und Validierung
+
+### Sonstiges
+- Refactoring und Code-Cleanup in Kernfunktionen und Beispiel-Demos
+- Verbesserte Kommentierung für Utility- und Repair-Methoden
+- Kleinere Optimierungen bei der Handhabung komplexer Datenstrukturen
+
+
+
 ---
 
 ## [1.0.7] – 2025-04-24  
