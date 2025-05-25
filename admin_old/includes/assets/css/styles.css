@@ -1,0 +1,266 @@
+:root {
+    --main-color: #0176d0;
+    --main-color-hover: #005697;    
+    --main-color-disabled: #00569798;        
+    --main-color-gray: #b1c3d0;     
+    --sss-color: #d63384;
+    --bg-color: #0176d020;
+    --white-color: #f5f5f5;
+    --main-color-darken: #005393;
+    --second-color: #394955;
+    --accent-color: #ffa800;
+    --accent-hover: #e69500;
+    --accent2-color: #ff4500;
+    --accent2-hover: #c63500;
+    --text-color: #444;
+    --text-hover-color: #131e25;
+    --background-color: #f8f9fa;
+}
+
+
+header {
+    background: none !important;
+    text-align: center;
+
+}
+
+.top-separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ccc, #eee, #ccc);
+    opacity: 0.7;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 20px !important;
+}
+
+.tablehead {
+    color: var(--main-color) !important;
+    font-size: 1.2rem !important;
+    padding-bottom: 8px;
+}
+
+
+
+/* Fokus-Rahmen ohne blauen Bootstrap-Glow */
+.form-control {
+    box-shadow: none;
+    border-color: var(--main-color-gray);    
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--main-color);
+}
+
+/* Fokus-Rahmen ohne blauen Bootstrap-Glow */
+.toggle-eye {
+    box-shadow: none;
+    border-color: var(--main-color-gray);
+}
+
+
+/* Eigene Erweiterungen */
+.bg-admin-header {
+    background-color: #1f2937;
+  }
+  
+
+.admin-logo {
+    margin-top: 20px;
+    height: 70px;
+}
+
+.nav-logo {
+    margin-top: 15%;
+    width: 300px;
+}
+
+.sidebar {
+    /* Hintergrundverlauf UND Bild */
+    background: linear-gradient(to left, var(--main-color), var(--main-color-darken));
+    background-image: url('../images/navBG.webp');
+    background-repeat: repeat;
+    background-size: auto;
+    background-color: #1e1e1e; /* Fallback-Hintergrund */
+
+    /* Rahmen rechts */
+    border-right: 1px solid #ffffff33;
+
+    /* Textfarbe */
+    color: white;
+
+    /* Sidebar-Breite */
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%; /* oder konkret: z. B. 350px */
+}
+
+
+
+.left-tables_ {
+    padding: 10px;
+    color: var(--main-color);
+ 
+    font-size: 0.98rem !important;
+    background: linear-gradient(to right, #fffffff4, #ffffffc4);  
+
+    border-radius: 12px;;
+} 
+
+.left-tables-inner_ {
+
+    /* Maximale Höhe und Breite */
+    max-height: 90vh;  /* Maximal 80% der Sichthöhe */
+    max-width: 380px;  /* Maximale Breite, z.B. 300px */
+    
+    /* Scrollbar hinzufügen */
+    overflow-y: auto;  /* Vertikale Scrollbar bei Überschreitung der max-height */
+    overflow-x: hidden; /* Horizontale Scrollbar verhindern */
+    
+    /* Zusätzliche Stile für Scrollbar (optional) */
+    scrollbar-width: thin; /* Für Firefox */
+    scrollbar-color: var(--main-color) #f0f0f0; /* Für Firefox */    
+
+} 
+
+
+
+
+.left-tables {
+    color: var(--main-color);
+    font-size: 0.98rem !important;
+    background: linear-gradient(to right, #fffffff4, #ffffffc4);      
+
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 200px); /* passt Sidebar-Höhe an */
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 6px;   
+  }
+  
+  .left-tables-inner {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-right: 4px; /* für Scrollbar-Ausgleich */
+
+    /* Zusätzliche Stile für Scrollbar (optional) */
+    scrollbar-width: thin; /* Für Firefox */
+    scrollbar-color: #888 #f0f0f0; /* Für Firefox */      
+  }
+
+  .left-tables-inner::-webkit-scrollbar {
+    width: 6px;
+  }
+  .left-tables-inner::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 3px;
+  }  
+  
+
+
+  
+
+.nav-itemm  {
+    margin: 6px 0px;
+    padding: 2px;
+    padding-left: 6px;
+    color: var(--main-color);
+    background-color: #0176d024;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.278);   
+    border: 1px solid transparent;       
+}
+
+.nav-itemm:hover  {
+    color: var(--main-color) !important;
+    background-color: var(--sss-color);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.766);   
+}
+
+.nav-itemm:hover a  {
+    color: var(--white-color) !important;   
+    text-decoration: none;
+}
+
+
+.nav-itemm a  {
+    color: var(--main-color) !important;
+    text-decoration: none;    
+}
+
+.nav-itemm.active-table  {
+    color: var(--white-color) !important;  
+    background-color: var(--main-color);    
+    text-decoration: none;    
+    box-shadow: 0 0px 6px var(--sss-color);  
+    border: 1px solid var(--sss-color);        
+}
+
+.nav-itemm.active-table a  {
+    color: var(--white-color) !important;    
+    text-decoration: none;    
+}
+
+.nav-itemm.active-table i  {
+    color: var(--white-color) !important;    
+    text-decoration: none;    
+}
+
+
+.active-table_nav-itemm {
+    background-color: #0d6efd;
+    border-left: 4px solid gold;
+    padding-left: 8px;
+    font-weight: bold;
+    color: white !important;
+  }
+
+
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--main-color) !important;
+    --bs-btn-border-color: var(--main-color) !important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--sss-color) !important;
+    --bs-btn-hover-border-color: var(--sss-color) !important;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--main-color-hover) !important;
+    --bs-btn-active-border-color: var(--main-color-hover) !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--main-color-disabled) !important;
+    --bs-btn-disabled-border-color: var(--main-color-disabled) !important;       
+}
+
+.btn-primary {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.278);
+}
+
+.btn:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.801);
+}   
+
+
+.login-form-wrapper {
+    max-width: 480px;    
+    margin: auto; 
+    margin-top: 50px; 
+    background: #ffffffcc;
+}
+
+.card-img-top {
+    height: 230px;
+    background-image: url('../images/login.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+
+.login-form {
+    margin-top: 45px; padding-top:30px; border-top: solid 1px rgba(173, 173, 173, 0.3);
+}

@@ -1,0 +1,17 @@
+*.zip
+*.tar.gz
+*.bak
+*.log
+*.tmp
+*.swp
+JsonSQL.git/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+/vendor/
+/node_modules/
+doku/
+admin/
+api/
+demos/

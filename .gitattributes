@@ -1,0 +1,19 @@
+# Ordner ausschließen
+admin/ export-ignore
+api/ export-ignore
+demos/ export-ignore
+doku/ export-ignore
+.github/ export-ignore
+.idea/ export-ignore
+docs/ export-ignore
+examples/ export-ignore
+includes/ export-ignore
+tests/ export-ignore
+assets/ export-ignore
+
+# Einzeldateien ausschließen
+index.php export-ignore
+*.log export-ignore
+*.zip export-ignore
+*.bak export-ignore
+
